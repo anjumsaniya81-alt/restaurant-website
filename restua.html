@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spice Haven | Luxury Restaurant</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#faf8ff;
+    color:#29213a;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:680px;
+
+    background:
+    linear-gradient(
+        rgba(35,25,60,.76),
+        rgba(68,48,95,.82)
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=85");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.established{
+    color:#d9c47d;
+    font-size:12px;
+    letter-spacing:6px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:105px;
+    font-weight:600;
+    margin:12px 0;
+}
+
+.gold-line{
+    width:110px;
+    height:2px;
+    background:#d8bd73;
+    margin:20px auto;
+}
+
+.hero p{
+    font-size:18px;
+    color:#eee8f5;
+}
+
+.offer{
+    display:inline-block;
+    margin-top:30px;
+    padding:13px 35px;
+    border:1px solid #d8bd73;
+    color:#efd996;
+    letter-spacing:2px;
+    font-size:12px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:999;
+
+    background:#211936;
+
+    padding:18px;
+
+    text-align:center;
+}
+
+nav a{
+    color:#f5effb;
+    text-decoration:none;
+
+    margin:0 14px;
+
+    font-size:11px;
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d9bd73;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    max-width:800px;
+    margin:90px auto 75px;
+    text-align:center;
+}
+
+.intro span,
+.section-title span,
+.premium-label{
+    color:#8060a5;
+    letter-spacing:4px;
+    font-size:11px;
+}
+
+.intro h2,
+.section-title h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    color:#302342;
+    margin:10px 0;
+}
+
+.intro p{
+    color:#766e7d;
+    line-height:1.9;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+    margin-bottom:100px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+
+/* =========================
+   MENU GRID
+========================= */
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+
+/* =========================
+   FOOD CARD
+========================= */
+
+.card{
+    background:white;
+    border:1px solid #e4dced;
+
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 22px 50px
+    rgba(61,38,85,.18);
+}
+
+.food-img{
+    height:220px;
+    overflow:hidden;
+}
+
+.food-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.card:hover .food-img img{
+    transform:scale(1.08);
+}
+
+.card-content{
+    padding:24px;
+}
+
+.category{
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.nonveg{
+    color:#a64e5b;
+}
+
+.veg{
+    color:#4e865e;
+}
+
+.card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:29px;
+    margin:7px 0;
+    color:#302342;
+}
+
+.card p{
+    color:#77707f;
+    font-size:13px;
+    line-height:1.6;
+    min-height:42px;
+}
+
+.card-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-top:1px solid #eee8f2;
+
+    padding-top:16px;
+    margin-top:18px;
+}
+
+.price{
+    font-family:'Cormorant Garamond',serif;
+    font-size:27px;
+    color:#68508c;
+    font-weight:600;
+}
+
+.order{
+    background:#342346;
+    border:1px solid #342346;
+    color:white;
+
+    padding:9px 20px;
+
+    cursor:pointer;
+
+    font-size:10px;
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.order:hover{
+    background:#8060a5;
+}
+
+
+/* =========================
+   BLUE / LAVENDER SPECIAL
+========================= */
+
+.blue-section{
+    background:
+    linear-gradient(
+        120deg,
+        #eeeaff,
+        #e9f0ff
+    );
+
+    padding:80px 0;
+
+    margin-bottom:100px;
+}
+
+
+/* =========================
+   CHEF SIGNATURE
+========================= */
+
+.chef{
+    background:
+    linear-gradient(
+        rgba(38,27,57,.91),
+        rgba(58,39,76,.94)
+    );
+
+    color:white;
+
+    padding:85px 25px;
+
+    text-align:center;
+
+    margin-bottom:100px;
+}
+
+.chef span{
+    color:#d9bd73;
+    letter-spacing:4px;
+    font-size:11px;
+}
+
+.chef h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:56px;
+    margin:12px 0;
+}
+
+.chef p{
+    max-width:700px;
+    margin:auto;
+    color:#ded5e5;
+    line-height:1.8;
+}
+
+.chef-special{
+    margin-top:25px;
+
+    color:#e2ca84;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:30px;
+}
+
+
+/* =========================
+   10% DISCOUNT
+========================= */
+
+.discount{
+    text-align:center;
+
+    padding:70px 20px;
+
+    background:#eee5f8;
+
+    margin-bottom:100px;
+}
+
+.discount h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+    color:#332344;
+    margin:8px;
+}
+
+.discount p{
+    color:#777080;
+}
+
+
+/* =========================
+   MOJITOS
+========================= */
+
+.drink-card{
+    background:white;
+    text-align:center;
+
+    border:1px solid #e4dced;
+
+    overflow:hidden;
+
+    transition:.4s;
+}
+
+.drink-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 18px 40px
+    rgba(61,38,85,.15);
+}
+
+.drink-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.drink-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+    margin:17px 0 5px;
+}
+
+.drink-card p{
+    color:#777;
+    font-size:13px;
+    padding:0 20px;
+}
+
+.drink-price{
+    display:block;
+    margin:12px 0 25px;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#68508c;
+
+    font-size:26px;
+}
+
+
+/* =========================
+   WELCOME JUICE
+========================= */
+
+.welcome{
+    background:
+    linear-gradient(
+        rgba(45,31,61,.9),
+        rgba(67,45,82,.92)
+    ),
+    url("https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=1600&q=85");
+
+    background-size:cover;
+    background-position:center;
+
+    text-align:center;
+    color:white;
+
+    padding:90px 20px;
+
+    margin-bottom:100px;
+}
+
+.welcome h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:60px;
+}
+
+.welcome p{
+    max-width:650px;
+    margin:15px auto;
+
+    color:#ded4e7;
+    line-height:1.8;
+}
+
+.free{
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:13px 30px;
+
+    border:1px solid #d9bd73;
+
+    color:#e4ca88;
+
+    letter-spacing:2px;
+
+    font-size:11px;
+}
+
+
+/* =========================
+   DESSERT
+========================= */
+
+.dessert-section{
+    background:#f1ebfa;
+
+    padding:80px 0;
+
+    margin-bottom:100px;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experiences{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+
+    margin-bottom:100px;
+}
+
+.experience{
+    background:white;
+
+    text-align:center;
+
+    padding:40px 25px;
+
+    border:1px solid #e3dbe9;
+
+    transition:.3s;
+}
+
+.experience:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 35px
+    rgba(61,38,85,.15);
+}
+
+.icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.experience h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:30px;
+}
+
+.experience p{
+    color:#777;
+    font-size:13px;
+    line-height:1.7;
+    margin:10px 0;
+}
+
+.experience-price{
+    color:#715394;
+    font-family:'Cormorant Garamond',serif;
+    font-size:26px;
+}
+
+
+/* =========================
+   RATING
+========================= */
+
+.rating{
+    text-align:center;
+    margin-bottom:100px;
+}
+
+.stars{
+    color:#c6a450;
+    font-size:27px;
+    letter-spacing:5px;
+}
+
+.rating h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+    margin:8px;
+}
+
+
+/* =========================
+   RESERVATION
+========================= */
+
+.reservation{
+    background:white;
+
+    border:1px solid #e4dced;
+
+    padding:65px;
+
+    margin-bottom:100px;
+
+    text-align:center;
+}
+
+.reservation h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:55px;
+    margin:8px 0 30px;
+}
+
+.form{
+    max-width:900px;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+}
+
+.form input,
+.form select{
+    padding:14px;
+
+    border:1px solid #ded5e5;
+
+    font-family:'Poppins';
+
+    outline:none;
+}
+
+.reserve{
+    grid-column:1/-1;
+
+    padding:15px;
+
+    background:#332344;
+
+    color:white;
+
+    border:none;
+
+    cursor:pointer;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================
+   QR ORDER
+========================= */
+
+.scan{
+    background:white;
+
+    border:1px solid #e4dced;
+
+    padding:65px 35px;
+
+    margin-bottom:100px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:70px;
+}
+
+.qr{
+    text-align:center;
+}
+
+.qr img{
+    width:190px;
+    height:190px;
+
+    padding:10px;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.15);
+}
+
+.qr small{
+    display:block;
+
+    color:#8c8193;
+
+    margin-top:10px;
+}
+
+.scan-content{
+    max-width:520px;
+}
+
+.scan-content h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:57px;
+    margin:8px 0;
+}
+
+.scan-content p{
+    color:#777;
+    line-height:1.8;
+}
+
+
+/* =========================
+   MEMBERSHIP
+========================= */
+
+.membership{
+    background:
+    linear-gradient(
+        120deg,
+        #30203f,
+        #5d4078
+    );
+
+    text-align:center;
+
+    color:white;
+
+    padding:75px 25px;
+
+    margin-bottom:100px;
+}
+
+.membership h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:57px;
+    margin:8px;
+}
+
+.membership p{
+    max-width:650px;
+    margin:auto;
+    color:#ded5e5;
+}
+
+.join{
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:13px 32px;
+
+    border:1px solid #d9bd73;
+
+    color:#e4ca88;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#211936;
+
+    color:white;
+
+    text-align:center;
+
+    padding:70px 20px;
+}
+
+footer h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:48px;
+}
+
+.footer-line{
+    width:70px;
+    height:1px;
+    background:#d9bd73;
+
+    margin:20px auto;
+}
+
+footer p{
+    color:#bdb1c9;
+    font-size:13px;
+    margin:7px;
+}
+
+.thank-you{
+    color:#e0c889;
+    font-family:'Cormorant Garamond',serif;
+    font-size:29px;
+    margin:20px 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .menu-grid,
+    .experiences{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero h1{
+        font-size:75px;
+    }
+
+    .form{
+        grid-template-columns:1fr;
+    }
+
+    .scan{
+        gap:35px;
+    }
+}
+
+@media(max-width:600px){
+
+    .menu-grid,
+    .experiences{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:570px;
+    }
+
+    .hero h1{
+        font-size:58px;
+    }
+
+    .intro h2,
+    .section-title h2,
+    .chef h2,
+    .welcome h2{
+        font-size:43px;
+    }
+
+    nav a{
+        font-size:8px;
+        margin:0 5px;
+    }
+
+    .reservation{
+        padding:40px 20px;
+    }
+
+    .scan{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="established">
+SPICE HAVEN • EST. 2026
+</div>
+
+<h1>Spice Haven</h1>
+
+<div class="gold-line"></div>
+
+<p>
+Where extraordinary flavours meet timeless elegance.
+</p>
+
+<div class="offer">
+✦ 10% OFF YOUR DINING EXPERIENCE ✦
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<a href="#nonveg">Non-Veg</a>
+
+<a href="#veg">Veg</a>
+
+<a href="#drinks">Mojitos</a>
+
+<a href="#desserts">Desserts</a>
+
+<a href="#reserve">Reserve</a>
+
+<a href="#scan">Scan & Order</a>
+
+</nav>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro">
+
+<span>WELCOME TO SPICE HAVEN</span>
+
+<h2>A Taste Worth Remembering</h2>
+
+<p>
+At Spice Haven, every plate is created with passion,
+premium ingredients and carefully selected spices.
+Our goal is to turn every meal into an unforgettable
+dining experience.
+</p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- =========================
+     CHEF SPECIAL
+========================= -->
+
+<section class="chef">
+
+<span>CHEF'S SIGNATURE</span>
+
+<h2>Royal Spice Haven Biryani</h2>
+
+<p>
+Our signature creation combines fragrant basmati rice,
+tender chicken and an exclusive blend of aromatic spices,
+slow cooked to perfection.
+</p>
+
+<div class="chef-special">
+✦ Signature Dish • ₹499 ✦
+</div>
+
+</section>
+
+
+<!-- =========================
+     NON VEG
+========================= -->
+
+<section class="section" id="nonveg">
+
+<div class="section-title">
+
+<span>FROM OUR KITCHEN</span>
+
+<h2>Non-Vegetarian</h2>
+
+</div>
+
+
+<div class="menu-grid">
+
+
+<!-- Chicken Fry -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1608039755401-742074f0548d?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category nonveg">
+● NON-VEG
+</div>
+
+<h3>Chicken Fry</h3>
+
+<p>
+Crispy golden chicken coated in our signature spices.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹350</span>
+
+<button class="order">
+ORDER
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Chicken Biryani -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category nonveg">
+● NON-VEG
+</div>
+
+<h3>Chicken Biryani</h3>
+
+<p>
+Fragrant basmati rice layered with tender chicken.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹450</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Chicken Curry -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category nonveg">
+● NON-VEG
+</div>
+
+<h3>Chicken Curry</h3>
+
+<p>
+Tender chicken simmered in rich aromatic gravy.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹400</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Chicken Burger -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category nonveg">
+● NON-VEG
+</div>
+
+<h3>Chicken Burger</h3>
+
+<p>
+Juicy chicken patty with fresh greens and special sauce.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹300</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Chicken Tikka -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category nonveg">
+● NON-VEG
+</div>
+
+<h3>Chicken Tikka</h3>
+
+<p>
+Char-grilled chicken marinated in royal Indian spices.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹450</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Chicken 65 -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category nonveg">
+● NON-VEG
+</div>
+
+<h3>Chicken 65</h3>
+
+<p>
+Crispy spicy chicken bites with fresh herbs.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹350</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Chicken Wings -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category nonveg">
+● NON-VEG
+</div>
+
+<h3>Spicy Chicken Wings</h3>
+
+<p>
+Juicy wings glazed with our signature spicy sauce.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹420</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Mutton Biryani -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category nonveg">
+● NON-VEG
+</div>
+
+<h3>Mutton Biryani</h3>
+
+<p>
+Tender mutton cooked with fragrant basmati rice.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹500</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Fish Fry -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category nonveg">
+● NON-VEG
+</div>
+
+<h3>Classic Fish Fry</h3>
+
+<p>
+Fresh fish marinated with aromatic spices.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹450</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     VEG
+========================= -->
+
+<section class="section" id="veg">
+
+<div class="section-title">
+
+<span>GARDEN FRESH</span>
+
+<h2>Vegetarian</h2>
+
+</div>
+
+
+<div class="menu-grid">
+
+
+<!-- Veg Burger -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● VEGETARIAN
+</div>
+
+<h3>Classic Veg Burger</h3>
+
+<p>
+Crispy vegetable patty with fresh greens.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹250</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Veg Pizza -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● VEGETARIAN
+</div>
+
+<h3>Garden Veg Pizza</h3>
+
+<p>
+Hand-tossed pizza with fresh vegetables and cheese.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹400</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Paneer Tikka -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● VEGETARIAN
+</div>
+
+<h3>Paneer Tikka</h3>
+
+<p>
+Char-grilled paneer with peppers and spices.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹350</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Paneer Butter Masala -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● VEGETARIAN
+</div>
+
+<h3>Paneer Butter Masala</h3>
+
+<p>
+Soft paneer in rich creamy tomato gravy.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹450</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Veg Biryani -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● VEGETARIAN
+</div>
+
+<h3>Royal Veg Biryani</h3>
+
+<p>
+Fragrant rice with seasonal vegetables and herbs.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹350</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Mushroom -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● VEGETARIAN
+</div>
+
+<h3>Garlic Mushroom</h3>
+
+<p>
+Fresh mushrooms tossed with garlic and herbs.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹320</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Dal -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● VEGETARIAN
+</div>
+
+<h3>Dal Makhani</h3>
+
+<p>
+Slow-cooked lentils finished with butter and cream.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹300</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Pasta -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● VEGETARIAN
+</div>
+
+<h3>Creamy Cheese Pasta</h3>
+
+<p>
+Italian pasta in rich creamy cheese sauce.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹380</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Manchurian -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● VEGETARIAN
+</div>
+
+<h3>Veg Manchurian</h3>
+
+<p>
+Crispy vegetable balls with sweet-spicy sauce.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹300</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+</div>
+
+
+<!-- =========================
+     DISCOUNT
+========================= -->
+
+<section class="discount">
+
+<div class="premium-label">
+EXCLUSIVE SPICE HAVEN OFFER
+</div>
+
+<h2>Enjoy 10% OFF</h2>
+
+<p>
+A little extra warmth from us to you.
+Enjoy 10% off your dining experience.
+</p>
+
+</section>
+
+
+<!-- =========================
+     MOJITOS
+========================= -->
+
+<section class="blue-section" id="drinks">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>REFRESHING CREATIONS</span>
+
+<h2>Fresh Mojitos</h2>
+
+</div>
+
+
+<div class="menu-grid">
+
+
+<div class="drink-card">
+
+<img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&w=900&q=85">
+
+<h3>Classic Mint Mojito</h3>
+
+<p>
+Fresh mint, lime and sparkling refreshment.
+</p>
+
+<span class="drink-price">₹220</span>
+
+</div>
+
+
+<div class="drink-card">
+
+<img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?auto=format&fit=crop&w=900&q=85">
+
+<h3>Strawberry Mojito</h3>
+
+<p>
+Fresh strawberries, mint and chilled lime.
+</p>
+
+<span class="drink-price">₹250</span>
+
+</div>
+
+
+<div class="drink-card">
+
+<img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=900&q=85">
+
+<h3>Mango Mojito</h3>
+
+<p>
+Sweet mango with fresh mint and citrus.
+</p>
+
+<span class="drink-price">₹250</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     WELCOME JUICE
+========================= -->
+
+<section class="welcome">
+
+<h2>Complimentary Welcome Juice</h2>
+
+<p>
+Every guest at Spice Haven is special.
+Begin your experience with our complimentary
+welcome juice, served with our warmest welcome.
+</p>
+
+<div class="free">
+✦ FREE WELCOME JUICE FOR EVERY GUEST ✦
+</div>
+
+</section>
+
+
+<!-- =========================
+     DESSERTS
+========================= -->
+
+<section class="dessert-section" id="desserts">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>THE PERFECT ENDING</span>
+
+<h2>Signature Desserts</h2>
+
+</div>
+
+
+<div class="menu-grid">
+
+
+<!-- Gulab Jamun -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● DESSERT
+</div>
+
+<h3>Royal Gulab Jamun</h3>
+
+<p>
+Soft golden dumplings served warm with saffron syrup.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹220</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Cheesecake -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● DESSERT
+</div>
+
+<h3>Classic Cheesecake</h3>
+
+<p>
+Creamy cheesecake with a delicate berry finish.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹350</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Brownie -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● DESSERT
+</div>
+
+<h3>Chocolate Brownie</h3>
+
+<p>
+Warm chocolate brownie with a rich indulgent centre.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹300</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Ice Cream -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● DESSERT
+</div>
+
+<h3>Royal Ice Cream</h3>
+
+<p>
+Premium vanilla ice cream with nuts and caramel.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹250</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Tiramisu -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● DESSERT
+</div>
+
+<h3>Classic Tiramisu</h3>
+
+<p>
+Silky mascarpone layered with espresso-soaked sponge.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹400</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Rasmalai -->
+
+<div class="card">
+
+<div class="food-img">
+
+<img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=900&q=85">
+
+</div>
+
+<div class="card-content">
+
+<div class="category veg">
+● DESSERT
+</div>
+
+<h3>Saffron Rasmalai</h3>
+
+<p>
+Soft cottage-cheese dumplings in chilled saffron milk.
+</p>
+
+<div class="card-bottom">
+
+<span class="price">₹280</span>
+
+<button class="order">ORDER</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- =========================
+     EXPERIENCES
+========================= -->
+
+<section class="section">
+
+<div class="section-title">
+
+<span>CURATED EXPERIENCES</span>
+
+<h2>Luxury Dining</h2>
+
+</div>
+
+
+<div class="experiences">
+
+
+<div class="experience">
+
+<div class="icon">🍛</div>
+
+<h3>Royal Biryani Experience</h3>
+
+<p>
+Signature biryani, starter, refreshing drink
+and dessert.
+</p>
+
+<div class="experience-price">
+₹499
+</div>
+
+</div>
+
+
+<div class="experience">
+
+<div class="icon">💜</div>
+
+<h3>Couple Dinner</h3>
+
+<p>
+A romantic selection curated specially
+for two.
+</p>
+
+<div class="experience-price">
+₹999
+</div>
+
+</div>
+
+
+<div class="experience">
+
+<div class="icon">👑</div>
+
+<h3>Royal Veg Feast</h3>
+
+<p>
+Premium vegetarian dishes with dessert
+and mojito.
+</p>
+
+<div class="experience-price">
+₹799
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     RATING
+========================= -->
+
+<section class="rating">
+
+<div class="stars">
+★★★★★
+</div>
+
+<h2>Loved by Our Guests</h2>
+
+<p>
+Rated <strong>4.9 / 5</strong> by our guests.
+</p>
+
+</section>
+
+
+<!-- =========================
+     RESERVATION
+========================= -->
+
+<section class="reservation" id="reserve">
+
+<span class="premium-label">
+YOUR TABLE AWAITS
+</span>
+
+<h2>Reserve Your Table</h2>
+
+
+<form class="form">
+
+<input
+type="text"
+placeholder="Your Name"
+required
+>
+
+<input
+type="date"
+required
+>
+
+<input
+type="time"
+required
+>
+
+<select required>
+
+<option value="">
+Number of Guests
+</option>
+
+<option>1 Guest</option>
+<option>2 Guests</option>
+<option>3 Guests</option>
+<option>4 Guests</option>
+<option>5 Guests</option>
+<option>6+ Guests</option>
+
+</select>
+
+<input
+type="tel"
+placeholder="Phone Number"
+required
+>
+
+<input
+type="email"
+placeholder="Email Address"
+required
+>
+
+<button class="reserve" type="submit">
+RESERVE MY TABLE
+</button>
+
+</form>
+
+</section>
+
+
+<!-- =========================
+     QR ORDER
+========================= -->
+
+<section class="scan" id="scan">
+
+<div class="qr">
+
+<img
+src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://example.com/spicehaven"
+alt="Spice Haven QR Code"
+>
+
+<small>
+Scan with your phone camera
+</small>
+
+</div>
+
+
+<div class="scan-content">
+
+<span class="premium-label">
+TABLE SERVICE
+</span>
+
+<h2>Scan & Order</h2>
+
+<p>
+Scan the QR code placed on your table to view
+our complete menu and place your order directly
+from your phone.
+</p>
+
+<p style="margin-top:15px;color:#8060a5;">
+✦ Easy &nbsp; • &nbsp; Fast &nbsp; • &nbsp; Contactless
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MEMBERSHIP
+========================= -->
+
+<section class="membership">
+
+<span class="premium-label">
+SPICE HAVEN PRIVILEGE
+</span>
+
+<h2>Join Our Inner Circle</h2>
+
+<p>
+Enjoy exclusive offers, birthday surprises,
+priority reservations and special dining
+experiences as a Spice Haven member.
+</p>
+
+<a href="#" class="join">
+BECOME A MEMBER
+</a>
+
+</section>
+
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<h2>Spice Haven</h2>
+
+<div class="footer-line"></div>
+
+<div class="thank-you">
+Thank You For Coming ♡
+</div>
+
+<p>
+Where every flavour becomes a memory.
+</p>
+
+<p>
+📍 Your City &nbsp; | &nbsp;
+📞 +91 98765 43210
+</p>
+
+<p>
+✉ reservations@spicehaven.com
+</p>
+
+<br>
+
+<p>
+© 2026 Spice Haven • Fine Dining
+</p>
+
+</footer>
+
+
+<!-- =========================
+     SIMPLE ORDER MESSAGE
+========================= -->
+
+<script>
+
+const buttons = document.querySelectorAll(".order");
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const card = button.closest(".card");
+
+        const dish = card.querySelector("h3").innerText;
+
+        const price = card.querySelector(".price").innerText;
+
+        alert(
+            "✨ Thank you for choosing Spice Haven! ✨\n\n" +
+            dish +
+            " — " +
+            price +
+            "\n\nYour item has been selected for ordering."
+        );
+
+    });
+
+});
+
+
+document.querySelector(".form").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert(
+        "✨ Your table reservation request has been received! ✨\n\n" +
+        "Thank you for choosing Spice Haven."
+    );
+
+});
+
+</script>
+
+
+</body>
+</html>

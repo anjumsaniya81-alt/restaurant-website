@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spice Haven Restaurant</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f5efff;
+        color: #333;
+    }
+
+    /* HEADER */
+    header {
+        background: linear-gradient(135deg, #7b5bb5, #b89be8);
+        color: white;
+        text-align: center;
+        padding: 45px 20px;
+    }
+
+    header h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 19px;
+    }
+
+    .offer {
+        display: inline-block;
+        margin-top: 18px;
+        background: #fff;
+        color: #6a449c;
+        padding: 12px 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    /* NAVIGATION */
+    nav {
+        background: #4d3373;
+        padding: 16px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #e4d2ff;
+    }
+
+    /* CONTAINER */
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 40px auto;
+    }
+
+    .section-title {
+        text-align: center;
+        color: #65428f;
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    /* MENU GRID */
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        margin-bottom: 55px;
+    }
+
+    /* FOOD CARD */
+    .card {
+        background: white;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 5px 18px rgba(100, 60, 150, 0.15);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(100, 60, 150, 0.28);
+    }
+
+    .food-image {
+        height: 170px;
+        background: linear-gradient(135deg, #e8dcff, #c8aef0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 70px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .card h3 {
+        color: #65428f;
+        font-size: 22px;
+        margin: 8px 0;
+    }
+
+    .card p {
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    /* LABELS */
+    .veg-label,
+    .nonveg-label {
+        display: inline-block;
+        padding: 4px 9px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .veg-label {
+        color: green;
+        border: 2px solid green;
+    }
+
+    .nonveg-label {
+        color: red;
+        border: 2px solid red;
+    }
+
+    /* PRICE */
+    .price {
+        color: #5b3b82;
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    .order-btn {
+        float: right;
+        background: #8060b5;
+        color: white;
+        border: none;
+        padding: 9px 18px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .order-btn:hover {
+        background: #5d3b89;
+    }
+
+    /* SPECIAL SECTION */
+    .special {
+        background: linear-gradient(135deg, #d8c3f5, #eee4ff);
+        padding: 30px;
+        border-radius: 20px;
+        margin-bottom: 55px;
+        text-align: center;
+    }
+
+    .special h2 {
+        color: #65428f;
+        margin-bottom: 25px;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #4d3373;
+        color: white;
+        text-align: center;
+        padding: 30px;
+    }
+
+    footer h2 {
+        margin-bottom: 10px;
+    }
+
+    /* MOBILE */
+    @media(max-width:600px) {
+
+        header h1 {
+            font-size: 34px;
+        }
+
+        nav a {
+            margin: 0 6px;
+            font-size: 13px;
+        }
+
+        .section-title {
+            font-size: 26px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>💜 Spice Haven</h1>
+
+    <p>Delicious Food • Great Taste • Wonderful Moments</p>
+
+    <div class="offer">
+        🎉 Special Offer: 10% OFF on Your Order 🎉
+    </div>
+
+</header>
+
+
+<!-- NAVIGATION -->
+<nav>
+
+    <a href="#nonveg">Non-Veg</a>
+    <a href="#veg">Veg</a>
+    <a href="#drinks">Fresh Mojitos</a>
+    <a href="#welcome">Welcome Juice</a>
+
+</nav>
+
+
+<div class="container">
+
+
+<!-- NON VEG -->
+<section id="nonveg">
+
+    <h2 class="section-title">🍗 Non-Veg Special</h2>
+
+    <div class="menu">
+
+        <div class="card">
+
+            <div class="food-image">🍗</div>
+
+            <div class="card-content">
+
+                <span class="nonveg-label">NON-VEG</span>
+
+                <h3>Chicken Fry</h3>
+
+                <p>Crispy chicken fried with special Spice Haven spices.</p>
+
+                <span class="price">₹350</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🍛</div>
+
+            <div class="card-content">
+
+                <span class="nonveg-label">NON-VEG</span>
+
+                <h3>Chicken Biryani</h3>
+
+                <p>Aromatic basmati rice cooked with tender chicken and spices.</p>
+
+                <span class="price">₹450</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🍲</div>
+
+            <div class="card-content">
+
+                <span class="nonveg-label">NON-VEG</span>
+
+                <h3>Chicken Curry</h3>
+
+                <p>Juicy chicken cooked in a rich and flavorful curry.</p>
+
+                <span class="price">₹400</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🍔</div>
+
+            <div class="card-content">
+
+                <span class="nonveg-label">NON-VEG</span>
+
+                <h3>Chicken Burger</h3>
+
+                <p>Juicy chicken patty with fresh vegetables and creamy sauce.</p>
+
+                <span class="price">₹300</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🍗</div>
+
+            <div class="card-content">
+
+                <span class="nonveg-label">NON-VEG</span>
+
+                <h3>Chicken Tikka</h3>
+
+                <p>Grilled chicken pieces marinated with aromatic spices.</p>
+
+                <span class="price">₹450</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🍖</div>
+
+            <div class="card-content">
+
+                <span class="nonveg-label">NON-VEG</span>
+
+                <h3>Chicken 65</h3>
+
+                <p>Spicy and crispy chicken bites served with fresh onions.</p>
+
+                <span class="price">₹350</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VEG -->
+<section id="veg">
+
+    <h2 class="section-title">🥗 Veg Special</h2>
+
+    <div class="menu">
+
+        <div class="card">
+
+            <div class="food-image">🍔</div>
+
+            <div class="card-content">
+
+                <span class="veg-label">VEG</span>
+
+                <h3>Veg Burger</h3>
+
+                <p>Crispy vegetable patty with lettuce, tomato and special sauce.</p>
+
+                <span class="price">₹250</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🍕</div>
+
+            <div class="card-content">
+
+                <span class="veg-label">VEG</span>
+
+                <h3>Veg Pizza</h3>
+
+                <p>Cheesy pizza loaded with fresh vegetables and herbs.</p>
+
+                <span class="price">₹400</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🧀</div>
+
+            <div class="card-content">
+
+                <span class="veg-label">VEG</span>
+
+                <h3>Paneer Tikka</h3>
+
+                <p>Grilled paneer cubes marinated with delicious Indian spices.</p>
+
+                <span class="price">₹350</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🍛</div>
+
+            <div class="card-content">
+
+                <span class="veg-label">VEG</span>
+
+                <h3>Paneer Butter Masala</h3>
+
+                <p>Soft paneer cooked in a creamy tomato-based gravy.</p>
+
+                <span class="price">₹450</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🍚</div>
+
+            <div class="card-content">
+
+                <span class="veg-label">VEG</span>
+
+                <h3>Veg Biryani</h3>
+
+                <p>Aromatic basmati rice cooked with fresh vegetables and spices.</p>
+
+                <span class="price">₹350</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🥘</div>
+
+            <div class="card-content">
+
+                <span class="veg-label">VEG</span>
+
+                <h3>Veg Manchurian</h3>
+
+                <p>Crispy vegetable balls tossed in delicious Manchurian sauce.</p>
+
+                <span class="price">₹300</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FRESH MOJITOS -->
+<section id="drinks">
+
+    <h2 class="section-title">🍹 Fresh Mojitos</h2>
+
+    <div class="menu">
+
+        <div class="card">
+
+            <div class="food-image">🍋</div>
+
+            <div class="card-content">
+
+                <span class="veg-label">VEG</span>
+
+                <h3>Classic Mint Mojito</h3>
+
+                <p>Refreshing mint, lemon and sparkling drink.</p>
+
+                <span class="price">₹220</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🍓</div>
+
+            <div class="card-content">
+
+                <span class="veg-label">VEG</span>
+
+                <h3>Strawberry Mojito</h3>
+
+                <p>Fresh strawberries blended with mint and lemon.</p>
+
+                <span class="price">₹250</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+
+            <div class="food-image">🥭</div>
+
+            <div class="card-content">
+
+                <span class="veg-label">VEG</span>
+
+                <h3>Mango Mojito</h3>
+
+                <p>Sweet mango combined with refreshing mint and lemon.</p>
+
+                <span class="price">₹250</span>
+
+                <button class="order-btn">Order</button>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WELCOME JUICE -->
+<section id="welcome">
+
+    <div class="special">
+
+        <h2>🥤 Complimentary Welcome Juice</h2>
+
+        <p>
+            Welcome to <b>Spice Haven!</b>
+            Enjoy a refreshing welcome juice with your dining experience.
+        </p>
+
+        <br>
+
+        <h3>🎁 FREE Welcome Juice</h3>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h2>💜 Spice Haven</h2>
+
+    <p>Where Every Bite Tells a Story!</p>
+
+    <br>
+
+    <p>📞 Contact: +91 98765 43210</p>
+
+    <p>📍 Visit Us Today</p>
+
+    <br>
+
+    <p>© 2026 Spice Haven Restaurant | All Rights Reserved</p>
+
+</footer>
+
+</body>
+</html>

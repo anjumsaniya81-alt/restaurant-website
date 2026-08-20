@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Ocean Restaurant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f0f8ff;
+            color: #222;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0066cc, #00aaff);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #003d80;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #7ddfff;
+        }
+
+        /* Main */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #005bb5;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        /* Menu Grid */
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        /* Food Card */
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 80, 160, 0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 80, 160, 0.3);
+        }
+
+        .food-image {
+            height: 160px;
+            background: linear-gradient(135deg, #d9f2ff, #8ed8ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #005bb5;
+            margin-bottom: 8px;
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #003d80;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .order-btn {
+            float: right;
+            background: #0077cc;
+            color: white;
+            border: none;
+            padding: 9px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .order-btn:hover {
+            background: #004f99;
+        }
+
+        /* Veg / Non Veg labels */
+        .veg-label {
+            display: inline-block;
+            color: green;
+            border: 2px solid green;
+            padding: 3px 7px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .nonveg-label {
+            display: inline-block;
+            color: red;
+            border: 2px solid red;
+            padding: 3px 7px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #003d80;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        footer h2 {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .section-title {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>💙 Blue Ocean Restaurant</h1>
+        <p>Delicious Food • Great Taste • Happy Moments</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#nonveg">Non-Veg</a>
+        <a href="#veg">Veg</a>
+        <a href="#desserts">Desserts</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- NON VEG -->
+        <section id="nonveg">
+            <h2 class="section-title">🍗 Non-Veg Special</h2>
+
+            <div class="menu">
+
+                <div class="card">
+                    <div class="food-image">🍗</div>
+                    <div class="card-content">
+                        <span class="nonveg-label">NON-VEG</span>
+                        <h3>Chicken Fry</h3>
+                        <p>Crispy and spicy chicken fried with special restaurant spices.</p>
+                        <span class="price">₹350</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🍛</div>
+                    <div class="card-content">
+                        <span class="nonveg-label">NON-VEG</span>
+                        <h3>Chicken Biryani</h3>
+                        <p>Delicious aromatic basmati rice cooked with tender chicken.</p>
+                        <span class="price">₹450</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🍲</div>
+                    <div class="card-content">
+                        <span class="nonveg-label">NON-VEG</span>
+                        <h3>Chicken Curry</h3>
+                        <p>Juicy chicken cooked in a rich and flavorful curry.</p>
+                        <span class="price">₹400</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🍔</div>
+                    <div class="card-content">
+                        <span class="nonveg-label">NON-VEG</span>
+                        <h3>Chicken Burger</h3>
+                        <p>Juicy chicken patty with fresh vegetables and creamy sauce.</p>
+                        <span class="price">₹300</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🍗</div>
+                    <div class="card-content">
+                        <span class="nonveg-label">NON-VEG</span>
+                        <h3>Chicken Tikka</h3>
+                        <p>Soft chicken pieces marinated in delicious Indian spices.</p>
+                        <span class="price">₹450</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🍖</div>
+                    <div class="card-content">
+                        <span class="nonveg-label">NON-VEG</span>
+                        <h3>Chicken 65</h3>
+                        <p>Spicy, crispy and delicious deep-fried chicken bites.</p>
+                        <span class="price">₹350</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- VEG -->
+        <section id="veg">
+            <h2 class="section-title">🥗 Veg Special</h2>
+
+            <div class="menu">
+
+                <div class="card">
+                    <div class="food-image">🍔</div>
+                    <div class="card-content">
+                        <span class="veg-label">VEG</span>
+                        <h3>Veg Burger</h3>
+                        <p>Crispy vegetable patty with fresh lettuce, tomato and sauces.</p>
+                        <span class="price">₹250</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🍕</div>
+                    <div class="card-content">
+                        <span class="veg-label">VEG</span>
+                        <h3>Veg Pizza</h3>
+                        <p>Cheesy pizza topped with fresh vegetables and herbs.</p>
+                        <span class="price">₹400</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🧀</div>
+                    <div class="card-content">
+                        <span class="veg-label">VEG</span>
+                        <h3>Paneer Tikka</h3>
+                        <p>Grilled paneer cubes marinated with aromatic Indian spices.</p>
+                        <span class="price">₹350</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🍛</div>
+                    <div class="card-content">
+                        <span class="veg-label">VEG</span>
+                        <h3>Paneer Butter Masala</h3>
+                        <p>Soft paneer cooked in a creamy and rich tomato gravy.</p>
+                        <span class="price">₹450</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🍚</div>
+                    <div class="card-content">
+                        <span class="veg-label">VEG</span>
+                        <h3>Veg Biryani</h3>
+                        <p>Aromatic basmati rice cooked with fresh vegetables and spices.</p>
+                        <span class="price">₹350</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🥘</div>
+                    <div class="card-content">
+                        <span class="veg-label">VEG</span>
+                        <h3>Veg Manchurian</h3>
+                        <p>Crispy vegetable balls tossed in delicious Manchurian sauce.</p>
+                        <span class="price">₹300</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- DESSERTS -->
+        <section id="desserts">
+            <h2 class="section-title">🍰 Desserts</h2>
+
+            <div class="menu">
+
+                <div class="card">
+                    <div class="food-image">🍰</div>
+                    <div class="card-content">
+                        <span class="veg-label">VEG</span>
+                        <h3>Chocolate Cake</h3>
+                        <p>Rich and soft chocolate cake topped with creamy chocolate.</p>
+                        <span class="price">₹250</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🍨</div>
+                    <div class="card-content">
+                        <span class="veg-label">VEG</span>
+                        <h3>Ice Cream</h3>
+                        <p>Cold and creamy ice cream available in different flavors.</p>
+                        <span class="price">₹200</span>
+                        <button class="order-btn">Order</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="food-image">🍮</div>
+                    <div class
+    <!-- Footer -->
+    <footer>
+        <h2>💙 Blue Ocean Restaurant</h2>
+        <p>Tha
